@@ -6,7 +6,7 @@ namespace Instructions
     {
         static void Main(string[] args)
         {
-            
+           
         }
 
         private static bool IsDivisorOf(int x, int n)
@@ -95,6 +95,40 @@ namespace Instructions
                 default:
                     Console.WriteLine("Obj is something else");
                     break;
+            }
+        }
+
+        public static int Initialize()
+        {
+            Console.WriteLine("Executing Initializing()");
+            return 0;
+        }
+        public static bool EvaluateCondition(int nr)
+        {
+            Console.WriteLine("Executing EvaluateCondition()");
+            return nr<10;
+        }
+        public static int Iterator(int x)
+        {
+            Console.WriteLine("Executing Iterator()");
+            return x+1;
+        }
+
+        public static void ForInstruction()
+        {
+            for (int i = 0, y = 100; i < 10; i++, y += 2, Console.WriteLine("Text"))
+            {
+                Console.WriteLine(i);
+                if (i == 0)
+                {
+                    continue;
+                    //nu merge mai jos cu urmatorul if ci trece la urmatorul "i" in interiorul forului
+                }
+                if (i % 3 == 0)
+                {
+                    break;
+                    //iese afara din cod prematur
+                }
             }
         }
     }
